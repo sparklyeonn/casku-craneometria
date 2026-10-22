@@ -239,8 +239,7 @@ export default function FormularioEvaluacion() {
                   {resultado.diagCraneal}
                 </span>
                 {resultado.diagAsim && (
-                  <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold ${colorChip["leve"]}`}>
-                    <span className="w-1.5 h-1.5 rounded-full bg-current" />
+                    <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold ${resultado.indiceAsimetria >= 12 ? colorChip["moderado"] : colorChip["leve"]}`}>                    <span className="w-1.5 h-1.5 rounded-full bg-current" />
                     {resultado.diagAsim}
                   </span>
                 )}
